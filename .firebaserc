@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "recuitz"
-  }
+    "default": "fwallet-bf64d",
+    "fwallet": "fwallet-bf64d"
+  },
+  "targets": {},
+  "etags": {}
 }
