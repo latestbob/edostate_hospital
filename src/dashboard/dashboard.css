@@ -1,8 +1,43 @@
 .main{
-    min-height:1200px;
+    height: 100vh;
     width: 100%;
 
 
+}
+
+.balance{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btc {
+    background-image: linear-gradient(110deg, #5052a1 2.34%, #24aeb8 99.94%);
+    color:white;
+
+    padding: 20px 30px;
+    
+}
+.mywith{
+background-color: #5052a1;
+color:white;
+margin-bottom: 20px;
+}
+.profit {
+    background-image: linear-gradient(110deg, #5052a1 2.34%, #24aeb8 99.94%);
+    color:white;
+
+    padding: 20px 30px;
+}
+
+.aboutt{
+    font-size:13px;
+    font-weight: 500;
+}
+
+.aboutValue{
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .searchItem:hover{

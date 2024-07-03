@@ -12,15 +12,25 @@ import { getStorage } from "firebase/storage";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAeH6TNeWR1-ySfqoG91egbghudMlZyDOQ",
+//   authDomain: "recuitz.firebaseapp.com",
+//   projectId: "recuitz",
+//   storageBucket: "recuitz.appspot.com",
+//   messagingSenderId: "686399885441",
+//   appId: "1:686399885441:web:6447865adf9516010a3d80",
+//   measurementId: "G-42KBZ11E5W"
+// };
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAeH6TNeWR1-ySfqoG91egbghudMlZyDOQ",
-  authDomain: "recuitz.firebaseapp.com",
-  projectId: "recuitz",
-  storageBucket: "recuitz.appspot.com",
-  messagingSenderId: "686399885441",
-  appId: "1:686399885441:web:6447865adf9516010a3d80",
-  measurementId: "G-42KBZ11E5W"
+  apiKey: "AIzaSyCa6A2Rb76vLjHyZTXctlrFTFxypgT8srM",
+  authDomain: "fwallet-bf64d.firebaseapp.com",
+  projectId: "fwallet-bf64d",
+  storageBucket: "fwallet-bf64d.appspot.com",
+  messagingSenderId: "146299339395",
+  appId: "1:146299339395:web:22aa6642a49f9190d951b6"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

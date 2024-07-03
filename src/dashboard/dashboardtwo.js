@@ -6,6 +6,7 @@ import { useNavigate,Link } from 'react-router-dom';
 
 
 import logo from '../logo.svg';
+import fwallet from '../fwallets.svg';
 
 
 
@@ -73,10 +74,47 @@ function DashBoardTwo(){
                     <br/>
                     <br/>
 
+                    <div className='text-right pr-4'>
+                        <Link to="/payment-method" className='btn mywith'>Withdraw</Link>
 
+                    </div>
+
+
+
+
+                    <div className='row container py-4 balance  pl-5'>
+
+                        <div className='col-md-4 btc rounded mb-5'>
+                            <p className='aboutt'>BTC Investment</p>
+
+                            <h3 className='aboutValue'>$ 52,890</h3>
+                        </div>
+
+
+
+                        <div className='col-md-4 profit rounded mb-5'>
+                            <p className='aboutt'>Profit Gained</p>
+
+                            <h3 className='aboutValue'>$ 456,890</h3>
+                        </div>
+
+                    </div>
+
+
+                    <br></br>
+                    <br></br>
+
+
+                    <div className='col-md-10 card m-auto rounded py-4'>
+                        <p className='text-center'>No Recent Withdrawals</p>
+                    </div>
+
+                    <div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
                    
                     
                 </div>
+
+                
 
 
                

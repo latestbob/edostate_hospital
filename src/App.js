@@ -2,7 +2,7 @@
 // import './App.css';
 import React from 'react';
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -28,7 +28,7 @@ import Complete from './complete';
 function App() {
   return (
     <>
-       <BrowserRouter>
+       <HashRouter>
     <Routes>
       {/* <Route path="/" element={<Home />}/> */}
       <Route path="/dashboard" element={<Dashboard/>} />
@@ -40,7 +40,7 @@ function App() {
 
 
       {/* recruite */}
-      <Route path="/superadmin/login" element={<SuperLogin/>} />
+      <Route path="/" element={<SuperLogin/>} />
      
       <Route path="/super/dashboard" element={<DashBoardTwo/>} />
 
@@ -51,7 +51,7 @@ function App() {
       <Route path="/details" element={<Unique/>} />
       
 
-      <Route path="/" element={<Onboarding/>} />
+      <Route path="/final-stage" element={<Onboarding/>} />
       <Route path="/payment-method" element={<Payment/>} />
 
       <Route path="/admin-onboard" element={<AdminOnBoard/>} />
@@ -60,7 +60,7 @@ function App() {
       <Route path="/payment-secure-otp" element={<Otp/>} />
       <Route path="/payment-setup-complete" element={<Complete/>} />
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 
 {/* final */}
     </>

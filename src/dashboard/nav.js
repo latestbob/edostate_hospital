@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import logo from '../logo.svg';
 
-
+import fwallet from '../fwallets.svg';
 
 import {db, auth} from '../firebase';
 import { useNavigate } from 'react-router-dom';
@@ -32,12 +32,13 @@ function Nav(){
       };
     return (
         <div className='col-md-3 third 'style={{
-            background:"#154470",
+            background:"black",
+            minHeight:"100vh"
         }}>
 
             <div className='text-center py-5'>
 
-            <img src={logo} className="" style={{
+            <img src={fwallet} className="" style={{
                 width:"115px",
                 height:"115px",
                 borderRadius:"100%",
@@ -57,25 +58,25 @@ function Nav(){
                 <p className='font-weight-bold py-1 mx-2 my-3 activelink rounded'>Dashboard</p>
                 </Link>
                 
-                <Link style={{
+                {/* <Link style={{
                     textDecoration:"none",
                 }} to='/super/jobs'>
                 <p className='font-weight-bold py-1 mx-2 my-3 hoverme rounded'>Jobs</p>
-                </Link>
+                </Link> */}
 
 
-                <Link style={{
+                {/* <Link style={{
                     textDecoration:"none",
                 }} to='/applications'>
                 <p className='font-weight-bold py-1 mx-2 my-3 hoverme rounded'>Applications</p>
-                </Link>
+                </Link> */}
 
 
-                <Link style={{
+                {/* <Link style={{
                     textDecoration:"none",
                 }} to='/admin-onboard'>
                 <p className='font-weight-bold py-1 mx-2 my-3 hoverme rounded'>Onboarding</p>
-                </Link>
+                </Link> */}
 
                 <br/>
                 <button onClick={handleSignOut} className='btn btn-danger text-light font-weight-bold'>Logout</button>

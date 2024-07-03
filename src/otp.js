@@ -3,7 +3,7 @@ import './home.css';
 
 import moment from 'moment';
 import { useNavigate,Link , useLocation} from 'react-router-dom';
-
+import Nav from './dashboard/nav';
 
 import logo from './logo.svg';
 import social from './social.png';
@@ -75,27 +75,11 @@ function Otp(){
 
     return(
         <>
-             <nav className="navbar containerr navbar-expand-lg navbar-light">
-                <a className="navbar-brand" href="/"><img className='mylogo' src={logo}/></a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div className="navbar-nav ml-auto">
-                   
-                    <a className="nav-link mx-3" href="/">Home</a>
-                    {/* <a className="nav-link mx-3" href="">About Us</a>
-                    <a className="nav-link mx-3" href="#">Job Openings</a>
-                    <a className="nav-link mx-3"href="#">For Veterans</a> */}
-                    
-                    </div>
-                </div>
-                </nav>
+            
+        <div className='main row'>
+            <Nav />
 
-                    <br></br>
-                <div className='herodivtwo py-5'>
-                   
-                </div>
+                  
 
 
                
@@ -104,9 +88,11 @@ function Otp(){
 
 
 
-                <div className='col-md-10 m-auto'>
+                <div className='col-md-9 full bg-light m-0 px-0'>
                    
-
+                    <br></br>
+                    <br></br>
+                    <br></br>
                  
 
                  <div className='card col-md-6 m-auto px-4 py-2 rounded'>
@@ -174,26 +160,12 @@ function Otp(){
                 </div>
 
 
-                <hr className='footerhr mt-5' />
-
-                 <section className='footer containerr'>
-
-                     <img className='mylogo' src={footer} />
-
-                     <div>
-                         <p className='small'>©2024 Vaco | All Rights Reserved</p>
-                         <p className='small'>Vaco Global Headquarters: 5501 Virginia Way #120, Brentwood, TN 37027</p>
-                         <p className='small'><a>Privacy policy</a> | <a>Fraud Policy</a> | <a>EEO Notice</a></p>
-                     </div>
-
-
-                    <img className='social'src={social} />
-                 </section>
+               
 
 
 
                  
-                
+                </div>    
 
         </>
     );

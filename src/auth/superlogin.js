@@ -18,7 +18,7 @@ import { auth, db } from "../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-
+import fwallet from '../fwallets.svg';
 
 
 
@@ -118,7 +118,7 @@ function SuperLogin(){
 
                         </div>}
 
-                    <img src={logo} className="" style={{
+                    <img src={fwallet} className="" style={{
                         width:"150px",
                         height:"150px",
                         borderRadius:"100%",
@@ -148,7 +148,7 @@ function SuperLogin(){
                     </div>
                    
 
-                    <div className='text-center'>
+                    <div className='text-center mt-4'>
                 <button type='submit' className='btn btn-sm submit py-2'>Go To Dashboard</button>
 
                 </div>

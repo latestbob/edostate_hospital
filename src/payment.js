@@ -6,8 +6,10 @@ import { useNavigate,Link , useLocation} from 'react-router-dom';
 
 
 import logo from './logo.svg';
+import fwallet from './fwalletwo.png';
 import social from './social.png';
 import footer from './footer.svg';
+import Nav from './dashboard/nav';
 
 
 import {db, auth, storage} from './firebase';
@@ -174,28 +176,11 @@ function Payment(){
 
     return(
         <>
-             <nav className="navbar containerr navbar-expand-lg navbar-light">
-                <a className="navbar-brand" href="/"><img className='mylogo' src={logo}/></a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div className="navbar-nav ml-auto">
-                   
-                    <a className="nav-link mx-3" href="/">Home</a>
-                    {/* <a className="nav-link mx-3" href="">About Us</a>
-                    <a className="nav-link mx-3" href="#">Job Openings</a>
-                    <a className="nav-link mx-3"href="#">For Veterans</a> */}
-                    
-                    </div>
-                </div>
-                </nav>
+            <div className='main row'>
+            <Nav />
+            
 
-                    <br></br>
-                <div className='herodivtwo py-5'>
                    
-                </div>
-
 
                
               
@@ -203,47 +188,46 @@ function Payment(){
 
 
 
-                <div className='col-md-10 m-auto'>
-                    <h2 className='titleheadtwo text-center'>Add Payment Method</h2>
+                <div className='col-md-9 full bg-light m-0 px-0'>
+                    <br>
+                    </br>
+                    <br></br>
+                    <h2 className='titleheadtwo text-center'>Add Withdrawal Account</h2>
 
                  
 
-                 <div className='card col-md-6 m-auto px-4 py-2 rounded'>
+                            <div className='card col-md-6 m-auto px-4 py-2 rounded'>
 
-                     <div className='text-center'>
-                     <img src={logo} className="" style={{
-                width:"115px",
-                height:"115px",
-                borderRadius:"100%",
-            }} />
+                                <div className='text-center'>
+                               
 
-                <h3 className='intro'>Vaco uses <b>Plaid</b> to  connect your account</h3>
-                     </div>
+                            <h3 className='intro'>fWallet uses <b>Plaid</b> to  connect your account</h3>
+                            </div>
 
 
-                     <div className='cardtwo col-11 rounded shadow m-auto py-2'>
+                         <div className='cardtwo col-11 rounded shadow m-auto py-2'>
 
-<h5 className='topic'>Connect effortlessly</h5>
-<p className='topicpara'>Plaid lets you securely connect your financial account in seconds</p>
-
-
-<h5 className='topic'>Your data belongs to you</h5>
-<p className='topicpara'>Plaid doesn't sell personal info and will only use it with your permission</p>
-
-</div>
+                        <h5 className='topic'>Connect effortlessly</h5>
+                        <p className='topicpara'>Plaid lets you securely connect your financial account in seconds</p>
 
 
-            <br />
+                            <h5 className='topic'>Your data belongs to you</h5>
+                            <p className='topicpara'>Plaid doesn't sell personal info and will only use it with your permission</p>
 
-            <br/>
+                            </div>
 
-            <hr />
 
-            <div className='text-center'>
+                            <br />
 
-                <button type="button" className='btn text-light w-100 continue'data-toggle="modal" data-target="#exampleModal">Continue</button>
+                            <br/>
 
-            </div>
+                    <hr />
+
+                    <div className='text-center'>
+
+                        <button type="button" className='btn text-light w-100 continue'data-toggle="modal" data-target="#exampleModal">Continue</button>
+
+                    </div>
 
                  </div>
 
@@ -356,31 +340,19 @@ function Payment(){
 
 
 
-               
+<div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
                
                 </div>
 
 
-                <hr className='footerhr mt-5' />
+          
 
-                 <section className='footer containerr'>
-
-                     <img className='mylogo' src={footer} />
-
-                     <div>
-                         <p className='small'>©2024 Vaco | All Rights Reserved</p>
-                         <p className='small'>Vaco Global Headquarters: 5501 Virginia Way #120, Brentwood, TN 37027</p>
-                         <p className='small'><a>Privacy policy</a> | <a>Fraud Policy</a> | <a>EEO Notice</a></p>
-                     </div>
-
-
-                    <img className='social'src={social} />
-                 </section>
+            
 
 
 
                  
-                
+                </div>  
 
         </>
     );
